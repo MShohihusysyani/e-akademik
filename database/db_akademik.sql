@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Des 2022 pada 17.19
--- Versi server: 10.4.24-MariaDB
--- Versi PHP: 7.4.29
+-- Generation Time: Feb 22, 2023 at 06:15 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dosen`
+-- Table structure for table `dosen`
 --
 
 CREATE TABLE `dosen` (
@@ -39,7 +39,7 @@ CREATE TABLE `dosen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `dosen`
+-- Dumping data for table `dosen`
 --
 
 INSERT INTO `dosen` (`id_dosen`, `nidn`, `nama_dosen`, `jenis_kelamin`, `alamat`, `telp`, `email`, `photo`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `dosen` (`id_dosen`, `nidn`, `nama_dosen`, `jenis_kelamin`, `alamat`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jurusan`
+-- Table structure for table `jurusan`
 --
 
 CREATE TABLE `jurusan` (
@@ -58,7 +58,7 @@ CREATE TABLE `jurusan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jurusan`
+-- Dumping data for table `jurusan`
 --
 
 INSERT INTO `jurusan` (`id_jurusan`, `kode_jurusan`, `nama_jurusan`) VALUES
@@ -68,7 +68,7 @@ INSERT INTO `jurusan` (`id_jurusan`, `kode_jurusan`, `nama_jurusan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `krs`
+-- Table structure for table `krs`
 --
 
 CREATE TABLE `krs` (
@@ -80,7 +80,7 @@ CREATE TABLE `krs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `krs`
+-- Dumping data for table `krs`
 --
 
 INSERT INTO `krs` (`id_krs`, `id_thn_akad`, `nim`, `kode_matakuliah`, `nilai`) VALUES
@@ -102,7 +102,7 @@ INSERT INTO `krs` (`id_krs`, `id_thn_akad`, `nim`, `kode_matakuliah`, `nilai`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mahasiswa`
+-- Table structure for table `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
@@ -120,17 +120,16 @@ CREATE TABLE `mahasiswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `mahasiswa`
+-- Dumping data for table `mahasiswa`
 --
 
 INSERT INTO `mahasiswa` (`id`, `nim`, `nama_lengkap`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `telepon`, `email`, `nama_prodi`, `photo`) VALUES
-(5, '19SA1313', 'Muhammad Shohihusysyani', 'Laki Laki', 'Purwokerto', '2001-06-11', 'Purwokerto', '085701241187', 'mhs@harapan.bunda.ac.id', 'Informatika', 'mhs4.png'),
-(10, '19SA1317', 'Moh Imam Roza R', 'Laki Laki', 'Tegal', '1999-06-15', 'Tegal Kota', '085701241186', 'mhs@harapan.bunda.ac.id', 'Informatika', 'mhs9.png');
+(5, '19SA1313', 'Muhammad Shohihusysyani', 'Laki Laki', 'Purwokerto', '2001-06-11', 'Purwokerto', '085701241187', 'mhs@harapan.bunda.ac.id', 'Informatika', 'mhs4.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `matakuliah`
+-- Table structure for table `matakuliah`
 --
 
 CREATE TABLE `matakuliah` (
@@ -142,7 +141,7 @@ CREATE TABLE `matakuliah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `matakuliah`
+-- Dumping data for table `matakuliah`
 --
 
 INSERT INTO `matakuliah` (`kode_matakuliah`, `nama_matakuliah`, `sks`, `semester`, `nama_prodi`) VALUES
@@ -157,7 +156,7 @@ INSERT INTO `matakuliah` (`kode_matakuliah`, `nama_matakuliah`, `sks`, `semester
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `prodi`
+-- Table structure for table `prodi`
 --
 
 CREATE TABLE `prodi` (
@@ -168,7 +167,7 @@ CREATE TABLE `prodi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `prodi`
+-- Dumping data for table `prodi`
 --
 
 INSERT INTO `prodi` (`id_prodi`, `kode_prodi`, `nama_prodi`, `nama_jurusan`) VALUES
@@ -180,7 +179,7 @@ INSERT INTO `prodi` (`id_prodi`, `kode_prodi`, `nama_prodi`, `nama_jurusan`) VAL
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tahun_akademik`
+-- Table structure for table `tahun_akademik`
 --
 
 CREATE TABLE `tahun_akademik` (
@@ -191,19 +190,19 @@ CREATE TABLE `tahun_akademik` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tahun_akademik`
+-- Dumping data for table `tahun_akademik`
 --
 
 INSERT INTO `tahun_akademik` (`id_thn_akad`, `tahun_akademik`, `semester`, `status`) VALUES
 (14, '2022/2023', '1', 'Aktif'),
-(15, '2022/2023', '2', 'Non Akktif'),
+(15, '2022/2023', '2', 'Aktif'),
 (16, '2019/2020', '1', 'Aktif'),
 (17, '2019/2020', '2', 'Aktif');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `transkrip_nilai`
+-- Table structure for table `transkrip_nilai`
 --
 
 CREATE TABLE `transkrip_nilai` (
@@ -214,7 +213,7 @@ CREATE TABLE `transkrip_nilai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `transkrip_nilai`
+-- Dumping data for table `transkrip_nilai`
 --
 
 INSERT INTO `transkrip_nilai` (`id_transkrip`, `nim`, `kode_matakuliah`, `nilai`) VALUES
@@ -236,7 +235,7 @@ INSERT INTO `transkrip_nilai` (`id_transkrip`, `nim`, `kode_matakuliah`, `nilai`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -250,116 +249,114 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `level`, `blokir`, `id_session`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', 'admin', 'N', ''),
-(9, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'user@gmail.com', 'users', 'N', ''),
-(10, '19sa1313', 'e10adc3949ba59abbe56e057f20f883e', 'mhs@harapan.bunda.ac.id', 'admin', 'N', ''),
-(14, '0618019401', 'e10adc3949ba59abbe56e057f20f883e', 'dosen@harapan.bunda.ac.id', 'dosen', 'N', 'd41d8cd98f00b204e9800998ecf8427e'),
-(15, '19sa1317', 'e10adc3949ba59abbe56e057f20f883e', 'roza@gmail.com', 'users', 'N', 'd41d8cd98f00b204e9800998ecf8427e');
+(10, '19sa1313', 'e10adc3949ba59abbe56e057f20f883e', 'mhs@harapan.bunda.ac.id', 'users', 'N', ''),
+(14, '0618019401', 'e10adc3949ba59abbe56e057f20f883e', 'dosen@harapan.bunda.ac.id', 'dosen', 'N', 'd41d8cd98f00b204e9800998ecf8427e');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `dosen`
+-- Indexes for table `dosen`
 --
 ALTER TABLE `dosen`
   ADD PRIMARY KEY (`id_dosen`);
 
 --
--- Indeks untuk tabel `jurusan`
+-- Indexes for table `jurusan`
 --
 ALTER TABLE `jurusan`
   ADD PRIMARY KEY (`id_jurusan`);
 
 --
--- Indeks untuk tabel `krs`
+-- Indexes for table `krs`
 --
 ALTER TABLE `krs`
   ADD PRIMARY KEY (`id_krs`);
 
 --
--- Indeks untuk tabel `mahasiswa`
+-- Indexes for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `prodi`
+-- Indexes for table `prodi`
 --
 ALTER TABLE `prodi`
   ADD PRIMARY KEY (`id_prodi`);
 
 --
--- Indeks untuk tabel `tahun_akademik`
+-- Indexes for table `tahun_akademik`
 --
 ALTER TABLE `tahun_akademik`
   ADD PRIMARY KEY (`id_thn_akad`);
 
 --
--- Indeks untuk tabel `transkrip_nilai`
+-- Indexes for table `transkrip_nilai`
 --
 ALTER TABLE `transkrip_nilai`
   ADD PRIMARY KEY (`id_transkrip`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `dosen`
+-- AUTO_INCREMENT for table `dosen`
 --
 ALTER TABLE `dosen`
   MODIFY `id_dosen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `jurusan`
+-- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT untuk tabel `krs`
+-- AUTO_INCREMENT for table `krs`
 --
 ALTER TABLE `krs`
   MODIFY `id_krs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
--- AUTO_INCREMENT untuk tabel `mahasiswa`
+-- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT untuk tabel `prodi`
+-- AUTO_INCREMENT for table `prodi`
 --
 ALTER TABLE `prodi`
   MODIFY `id_prodi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `tahun_akademik`
+-- AUTO_INCREMENT for table `tahun_akademik`
 --
 ALTER TABLE `tahun_akademik`
   MODIFY `id_thn_akad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT untuk tabel `transkrip_nilai`
+-- AUTO_INCREMENT for table `transkrip_nilai`
 --
 ALTER TABLE `transkrip_nilai`
   MODIFY `id_transkrip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
